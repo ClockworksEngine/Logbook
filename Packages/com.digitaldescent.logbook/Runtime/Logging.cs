@@ -134,7 +134,7 @@ namespace DigitalDescent.Logbook
         }
 
         /// <summary>
-        /// Writes a message to the log. This method is only active when the application is running in debug mode.
+        /// Writes a message to the log.
         /// </summary>
         /// <param name="logType"><see cref="LogType"/> to log as.</param>
         /// <inheritdoc cref="LogInternal(string, LogEventLevel, string, int, UnityEngine.Object, Exception, object[])"/>
@@ -143,7 +143,13 @@ namespace DigitalDescent.Logbook
             LogInternal(message, logType.ToLogEventLevel(), callerFile, 2, context);
 
         /// <summary>
-        /// Writes a debug message to the log. This method is only active when the application is running in debug mode.
+        /// Writes a verbose message to the log. 
+        /// </summary>
+        /// <inheritdoc cref="LogInternal(string, LogEventLevel, string, int, UnityEngine.Object, Exception, object[])"/>
+        public static void Verbose(string message, UnityEngine.Object? context = null, [CallerFilePath] string callerFile = "") => LogInternal(message, LogEventLevel.Verbose, callerFile, 2, context);
+
+        /// <summary>
+        /// Writes a debug message to the log. 
         /// </summary>
         /// <inheritdoc cref="LogInternal(string, LogEventLevel, string, int, UnityEngine.Object, Exception, object[])"/>
         [HideInCallstack]

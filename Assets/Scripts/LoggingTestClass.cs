@@ -16,12 +16,12 @@ public static class LoggingTestClass
     public static void Execute()
     {
         // Logging
+        Logging.Verbose($"This is a class verbose message using {nameof(Logging)}.");
         Logging.Debug($"This is a class debug message using {nameof(Logging)}.");
         Logging.Info($"This is an class info message using {nameof(Logging)}.");
         Logging.Warning($"This is a class warning message using {nameof(Logging)}.");
         Logging.Error($"This is an class error message using {nameof(Logging)}.");
         Logging.Exception(new System.Exception("Test Exception"));
-
         Logging.BlankLine();
 
         // UnityEngine.Debug

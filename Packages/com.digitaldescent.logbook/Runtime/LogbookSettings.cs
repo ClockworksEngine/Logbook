@@ -2,8 +2,6 @@
 
 using System.Collections.Generic;
 using DigitalDescent.Logbook.Framework;
-using DigitalDescent.Logbook;
-using NUnit.Framework;
 using Serilog.Events;
 using UnityEngine;
 

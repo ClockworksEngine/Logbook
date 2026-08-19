@@ -33,12 +33,12 @@ internal sealed class LoggingTestBehaviour : MonoBehaviour
     private void Start()
     {
         // Logging
+        Logging.Verbose($"This is a Unity object verbose message using {nameof(Logging)}.", this);
         Logging.Debug($"This is a Unity object debug message using {nameof(Logging)}.", this);
         Logging.Info($"This is a Unity object info message using {nameof(Logging)}.", this);
         Logging.Warning($"This is a Unity object warning message using {nameof(Logging)}.", this);
         Logging.Error($"This is a Unity object error message using {nameof(Logging)}.", this);
         Logging.Exception(new Exception("Test Exception"), this);
-
         Logging.BlankLine();
 
         // UnityEngine.Debug
@@ -46,7 +46,6 @@ internal sealed class LoggingTestBehaviour : MonoBehaviour
         Debug.LogWarning($"This is a Unity object warning message using {nameof(Debug)}.", this);
         Debug.LogError($"This is a Unity object error message using {nameof(Debug)}.", this);
         Debug.LogException(new Exception("Test Exception"), this);
-
         Logging.BlankLine();
     }
 }
