@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SlnMergeSettings>
+  <MergeTargetSolution>Logbook.Repository.slnx</MergeTargetSolution>
+  <NestedProjects>
+	<!-- Unity3D Assemblies -->
+    <NestedProject ProjectName="Unity*" FolderPath="Engine" />
+    <NestedProject ProjectName="PPv2URPConverters" FolderPath="Engine" />
+
+	<!-- Thirdparty -->
+	<NestedProject ProjectName="Assembly*" FolderPath="Thirdparty" />
+	<NestedProject ProjectName="SlnMerge*" FolderPath="Thirdparty" />
+	
+	<!-- Test Assemblies -->
+    <NestedProject ProjectName="*Tests" FolderPath="Tests" />
+  </NestedProjects>
+  <ProjectConflictResolution>PreserveUnity</ProjectConflictResolution>
+  <DefaultProcessingPolicy>Merge</DefaultProcessingPolicy>
+</SlnMergeSettings>

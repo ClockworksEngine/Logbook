@@ -1,0 +1,14 @@
+{
+    "name": "DigitalDescent.Logbook.Runtime",
+    "rootNamespace": "DigitalDescent.Logbook",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

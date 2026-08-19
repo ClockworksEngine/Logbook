@@ -1,0 +1,24 @@
+{
+  "name": "com.digitaldescent.logbook",
+  "displayName": "Logbook",
+  "version": "1.0.0",
+  "unity": "6000.0",
+  "unityRelease": "0f1",
+  "dependencies": {
+    "org.nuget.microsoft.extensions.logging.abstractions": "10.0.10",
+    "org.nuget.serilog": "4.4.0",
+    "org.nuget.serilog.enrichers.demystifier": "1.0.3",
+    "org.nuget.serilog.sinks.console": "6.1.1",
+    "org.nuget.serilog.sinks.file": "7.0.0"
+  },
+  "description": "Serilog based logging library for Unity3D",
+  "keywords": [
+    "serilog",
+    "logging",
+    "logger",
+    "digitaldescent"
+  ],
+  "author": {
+    "name": "Digital Descent"
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "DigitalDescent.Logbook.Examples",
+    "rootNamespace": "DigitalDescent.Logbook.Examples",
+    "references": [
+        "GUID:78a44186408f2e142b47fe91dfce497f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
