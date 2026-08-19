@@ -1,5 +1,6 @@
 ﻿// Copyright Digital Descent, All rights reserved.
 
+using System;
 using System.Collections.Generic;
 using DigitalDescent.Logbook.Framework;
 using Serilog.Events;
@@ -15,12 +16,6 @@ namespace DigitalDescent.Logbook
     public sealed class LogbookSettings : SingletonAsset<LogbookSettings>
     {
         /// <summary>
-        /// Flag indicating whether to use colors in the logging output. 
-        /// If set to true, log messages will be color-coded based on their severity level.
-        /// </summary>
-        public bool UseLoggingColors = !Application.isEditor;
-
-        /// <summary>
         /// Gets or sets the minimum log level for the logging system. Log messages below this level will be ignored.
         /// </summary>
         /// <remarks>
@@ -34,5 +29,48 @@ namespace DigitalDescent.Logbook
         /// such as a file, console, or external service.
         /// </summary>
         public List<LogbookTarget> Targets = new();
+
+        /// <summary>
+        /// Flag indicating whether to use colors in the logging output. 
+        /// If set to true, log messages will be color-coded based on their severity level.
+        /// </summary>
+        [Header("Logging Colors")]
+        public bool UseLoggingColors = !Application.isEditor;
+
+        /// <summary>
+        /// <see cref="ConsoleColor"/> to use when logging Verbose messages.
+        /// </summary>
+        [Tooltip("The color to use for Verbose log messages.")]
+        public ConsoleColor VerboseColor = ConsoleColor.Magenta;
+
+        /// <summary>
+        /// <see cref="ConsoleColor"/> to use when logging Debug messages.
+        /// </summary>
+        [Tooltip("The color to use for Debug log messages.")]
+        public ConsoleColor DebugColor = ConsoleColor.Gray;
+
+        /// <summary>
+        /// <see cref="ConsoleColor"/> to use when logging Information messages.
+        /// </summary>
+        [Tooltip("The color to use for Information log messages.")]
+        public ConsoleColor InformationColor = ConsoleColor.White;
+
+        /// <summary>
+        /// <see cref="ConsoleColor"/> to use when logging Warning messages.
+        /// </summary>
+        [Tooltip("The color to use for Warning log messages.")]
+        public ConsoleColor WarningColor = ConsoleColor.Yellow;
+
+        /// <summary>
+        /// <see cref="ConsoleColor"/> to use when logging Error messages.
+        /// </summary>
+        [Tooltip("The color to use for Error log messages.")]
+        public ConsoleColor ErrorColor = ConsoleColor.Red;
+
+        /// <summary>
+        /// <see cref="ConsoleColor"/> to use when logging Fatal messages.
+        /// </summary>
+        [Tooltip("The color to use for Fatal log messages.")]
+        public ConsoleColor FatalColor = ConsoleColor.Red;
     }
 }

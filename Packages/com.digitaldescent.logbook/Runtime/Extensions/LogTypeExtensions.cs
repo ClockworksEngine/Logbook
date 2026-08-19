@@ -19,9 +19,8 @@ namespace DigitalDescent.Logbook.Extensions
         /// <param name="level">Level to convert.</param>
         /// <returns>Converted type.</returns>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when an unknown event level is provided.</exception>
-        internal static LogLevel ToLogLevel(this LogType level)
-        {
-            return level switch
+        internal static LogLevel ToLogLevel(this LogType level) =>
+            level switch
             {
                 LogType.Assert => LogLevel.Debug,
                 LogType.Log => LogLevel.Information,
@@ -30,7 +29,6 @@ namespace DigitalDescent.Logbook.Extensions
                 LogType.Exception => LogLevel.Critical,
                 _ => throw new ArgumentOutOfRangeException(nameof(level), level, null),
             };
-        }
 
         /// <summary>
         /// Converts a Unity <see cref="LogType"/> to a Serilog <see cref="LogEventLevel"/>.
@@ -38,9 +36,8 @@ namespace DigitalDescent.Logbook.Extensions
         /// <param name="level">Level to convert.</param>
         /// <returns>Converted type.</returns>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when an unknown event level is provided.</exception>
-        internal static LogEventLevel ToLogEventLevel(this LogType level)
-        {
-            return level switch
+        internal static LogEventLevel ToLogEventLevel(this LogType level) =>
+            level switch
             {
                 LogType.Assert => LogEventLevel.Debug,
                 LogType.Log => LogEventLevel.Information,
@@ -49,7 +46,6 @@ namespace DigitalDescent.Logbook.Extensions
                 LogType.Exception => LogEventLevel.Fatal,
                 _ => throw new ArgumentOutOfRangeException(nameof(level), level, null),
             };
-        }
 
         /// <summary>
         /// Gets the corresponding <see cref="ConsoleColor"> for a given <see cref="LogType">.

@@ -18,9 +18,8 @@ namespace DigitalDescent.Logbook.Extensions
         /// <param name="level">Level to convert.</param>
         /// <returns>Converted type.</returns>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when an unknown event level is provided.</exception>
-        internal static LogEventLevel ToEventLevel(this LogLevel level)
-        {
-            return level switch
+        internal static LogEventLevel ToEventLevel(this LogLevel level) =>
+            level switch
             {
                 LogLevel.Trace => LogEventLevel.Verbose,
                 LogLevel.Debug => LogEventLevel.Debug,
@@ -30,7 +29,6 @@ namespace DigitalDescent.Logbook.Extensions
                 LogLevel.Critical => LogEventLevel.Fatal,
                 _ => throw new ArgumentOutOfRangeException(nameof(level), level, null),
             };
-        }
 
         /// <summary>
         /// Converts a Microsoft <see cref="LogLevel"/> to a Unity <see cref="LogType"/>.
@@ -38,9 +36,8 @@ namespace DigitalDescent.Logbook.Extensions
         /// <param name="level">Level to convert.</param>
         /// <returns>Converted type.</returns>
         /// <exception cref="ArgumentOutOfRangeException">Thrown when an unknown event level is provided.</exception>
-        internal static LogLevel ToLogType(this LogLevel level)
-        {
-            return level switch
+        internal static LogLevel ToLogType(this LogLevel level) =>
+            level switch
             {
                 LogLevel.Trace => LogLevel.Debug,
                 LogLevel.Debug => LogLevel.Debug,
@@ -50,7 +47,6 @@ namespace DigitalDescent.Logbook.Extensions
                 LogLevel.Critical => LogLevel.Critical,
                 _ => throw new ArgumentOutOfRangeException(nameof(level), level, null),
             };
-        }
 
         /// <summary>
         /// Gets the corresponding <see cref="ConsoleColor"> for a given <see cref="LogLevel">.
