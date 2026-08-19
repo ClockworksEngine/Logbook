@@ -14,7 +14,7 @@ namespace DigitalDescent.Logbook.Capture
     /// When an instance of this class is created, it starts capturing log events, and when it is disposed, 
     /// it stops capturing and provides access to the captured events.
     /// </summary>
-    internal sealed class LoggingCaptureScope : IDisposable
+    public sealed class LoggingCaptureScope : IDisposable
     {
         private const string CaptureIdPropertyName = "CaptureId";
         private readonly string _captureId;
@@ -28,7 +28,7 @@ namespace DigitalDescent.Logbook.Capture
         /// </summary>
         public List<LogEvent> CapturedEvents { get; } = new();
 
-        public LoggingCaptureScope(LoggingCaptureSink sink)
+        internal LoggingCaptureScope(LoggingCaptureSink sink)
         {
             _sink = sink;
             _captureId = Guid.NewGuid().ToString();
