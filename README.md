@@ -15,7 +15,7 @@
 
 ## Usage
 
-Logbook by default will replace the default behaviour of Unity's Debug class. Allowing existing code and libraries to route their log messages through Logbook. Ideally, you should use Logbook's static Logging class <br/>
+Logbook by default will replace the default behaviour of Unity's Debug class. Allowing existing code and libraries to route their log messages through Logbook. Ideally, you should use Logbook's static Logging class
 directly to allow for additional context and log levels that are otherwise not supported by Unity's Debug class.
 
 ```csharp
