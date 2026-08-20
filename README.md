@@ -1,22 +1,39 @@
-# Logbook
+# Logbook [![Build Status](https://img.shields.io/github/actions/workflow/status/ClockworksEngine/Logbook/ci.yml?branch=master)](https://github.com/ClockworksEngine/Logbook/actions) 
+
+<img align="right" width="160px" height="160px" alt="Clockworks logo" src="https://avatars.githubusercontent.com/u/315957268?s=200&v=4">
+
+A Unity logging package that replaces Unity's default logger with a custom Serilog solution capable of additional log levels, interfacing with libraries that use Microosft's ILogger, and more.
 
 ## Installation
 
-### Unity Package Manager
+### Unity Package MAnager
+
+#### UPM
+
+TODO
+
+#### Git 
 
 1. Open Unity Package Manager
 2. Click the `+` button and select "Add package from git URL..."
 3. Enter: `https://github.com/ClockworksEngine/Logbook.git?path=/Packages/com.digitaldescent.logbook`
 
+
 ### Manual Installation
+
+> [!TIP]
+> The Clockworks team recommends cloning the repository into your ``Packages`` folder as Git Submodule when possible based on release tags.
 
 1. Clone or download this repository
 2. Copy the `Packages/com.digitaldescent.logbook` folder to your Unity project's `Packages` directory
 
+
 ## Usage
 
-Logbook by default will replace the default behaviour of Unity's Debug class. Allowing existing code and libraries to route their log messages through Logbook. Ideally, you should use Logbook's static Logging class
-directly to allow for additional context and log levels that are otherwise not supported by Unity's Debug class.
+Logbook by default will replace the default behaviour of Unity's Debug class. Allowing existing code and libraries to route their log messages through Logbook. 
+
+> [!TIP]
+> For best practices, treat the original Unity Debug class logging methods as "legacyh". You should use Logbook's static Logging class directly to allow for additional context and log levels that are otherwise not supported by Unity's Debug class.
 
 ```csharp
 using DigitalDescent.Logbook;
